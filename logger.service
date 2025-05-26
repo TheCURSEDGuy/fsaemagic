@@ -1,0 +1,11 @@
+[Unit]
+Description=Start C++ Logger
+After=network.target
+
+[Service]
+ExecStart=/home/pi/logger
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
