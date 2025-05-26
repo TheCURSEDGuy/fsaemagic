@@ -1,0 +1,13 @@
+[Unit]
+Description=Start Python Interface
+After=logger.service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/interface.py
+Restart=always
+User=pi
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+
+[Install]
+WantedBy=multi-user.target
